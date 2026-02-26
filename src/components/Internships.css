@@ -1,0 +1,38 @@
+.internships {
+  width: 100%;
+}
+
+.internships h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.internships-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  padding: 0 20px 40px 20px;
+}
+
+.internship-card {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.internship-card h3 {
+  margin-top: 0;
+}
+
+.internship-card ul {
+  text-align: left;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.internship-card li {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,23 @@
+.projects {
+  width: 100%;
+}
+
+.projects h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.project {
+  background: #f4f4f4;
+  margin: 0 auto 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+}
+
+.project h3 {
+  margin-top: 0;
+}

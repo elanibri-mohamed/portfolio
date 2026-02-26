@@ -1,0 +1,31 @@
+.contact {
+  width: 100%;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.contact-info {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
