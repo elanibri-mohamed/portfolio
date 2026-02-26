@@ -36,7 +36,7 @@ function App() {
     <div className="app">
       <header className="top-bar">
         <div className="profile">
-          <img src="/profile.jpg" alt="Profile" className="profile-img" />
+          <img src="/src/assets/profile.jpg" alt="Profile" className="profile-img" />
         </div>
         <nav className="nav">
           {['Home', 'Certifications', 'Projects', 'Internships', 'Education', 'Skills', 'Contact'].map(page => (
