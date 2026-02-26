@@ -7,6 +7,7 @@ import Internships from './components/Internships';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
+import profileImg from './assets/profile.jpg';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -36,7 +37,7 @@ function App() {
     <div className="app">
       <header className="top-bar">
         <div className="profile">
-          <img src="../assets/profile.jpg" alt="Profile" className="profile-img" />
+          <img src={profileImg} alt="Profile" className="profile-img" />
         </div>
         <nav className="nav">
           {['Home', 'Certifications', 'Projects', 'Internships', 'Education', 'Skills', 'Contact'].map(page => (
