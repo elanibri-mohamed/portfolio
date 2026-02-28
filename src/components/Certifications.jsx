@@ -10,7 +10,7 @@ const certificationsData = [
     organization: 'Fortinet',
     issueDate: 'June 2023',
     // placeholder badge; replace with real URL or local path
-    badge: '/src/assets/certs/fortinet-fortigate-7-4-administrator.jpg',
+    badge: '../certs/fortinet-fortigate-7-4-administrator.jpg',
     alt: 'Fortinet FortiGate 7.4 Administrator badge',
     verificationLink: 'https://verify.fortinet.com/your-cert',
     description:
