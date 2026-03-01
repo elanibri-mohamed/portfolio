@@ -60,15 +60,30 @@
   margin-left: 16px;
 }
 
-/* Core Competencies */
+/* Core Competencies - Mobile First */
 .core-competencies {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .competencies-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .competencies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .competencies-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
 }
 
 .competency-card {
@@ -129,27 +144,43 @@
   gap: 20px;
 }
 
-/* Filter Tabs */
+/* Filter Tabs - Mobile First */
 .filter-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   justify-content: center;
+  padding: 0 0.5rem;
 }
 
 .filter-tab {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
+  gap: 6px;
+  padding: 8px 14px;
   background: rgba(30, 41, 59, 0.6);
   border: 1px solid rgba(100, 116, 139, 0.2);
-  border-radius: 25px;
+  border-radius: 20px;
   color: #94a3b8;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
+  min-height: 40px;
+  white-space: nowrap;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .filter-tabs {
+    gap: 10px;
+  }
+  
+  .filter-tab {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    border-radius: 25px;
+  }
 }
 
 .filter-tab:hover {
@@ -219,15 +250,31 @@
   font-style: italic;
 }
 
-/* Skills Categories */
+/* Skills Categories - Mobile First */
 .skills-categories {
   margin-bottom: 50px;
 }
 
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .categories-grid {
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 24px;
+  }
 }
 
 /* No Results */
@@ -275,8 +322,21 @@
 
 .languages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .languages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .languages-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 }
 
 .language-card {
@@ -367,49 +427,42 @@
   }
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .categories-grid {
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+/* Container padding - Mobile First */
+.skills-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 16px 40px;
+  color: #e2e8f0;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  min-height: calc(100vh - 80px);
+  border-radius: 0;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .skills-container {
+    padding: 120px 24px 40px;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1024px) {
   .skills-container {
-    padding: 100px 16px 40px;
+    padding: 120px 32px 40px;
   }
+}
 
+/* Responsive Design - Legacy Support */
+@media (max-width: 768px) {
   .skills-title {
-    font-size: 2rem;
+    font-size: 1.875rem;
   }
 
   .skills-subtitle {
     font-size: 1rem;
   }
 
-  .competencies-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .filter-tabs {
-    gap: 8px;
-  }
-
-  .filter-tab {
-    padding: 8px 14px;
-    font-size: 0.85rem;
-  }
-
   .filter-label {
     display: none;
-  }
-
-  .categories-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .languages-grid {
-    grid-template-columns: 1fr;
   }
 
   .soft-skills-grid {
@@ -423,17 +476,26 @@
 }
 
 @media (max-width: 480px) {
+  .skills-container {
+    padding: 90px 12px 30px;
+  }
+  
   .skills-title {
-    font-size: 1.75rem;
+    font-size: 1.625rem;
   }
 
   .section-title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 
   .competency-card,
   .language-card {
-    padding: 18px;
+    padding: 16px;
+  }
+  
+  .skills-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
   }
 }
 

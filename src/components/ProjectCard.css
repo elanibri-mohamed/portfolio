@@ -139,24 +139,37 @@
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   margin-bottom: 16px;
 }
 
 .tech-tag {
   background: rgba(88, 166, 255, 0.15);
   color: #58a6ff;
-  padding: 4px 12px;
+  padding: 4px 10px;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 500;
   border: 1px solid rgba(88, 166, 255, 0.3);
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .tech-tag:hover {
   background: rgba(88, 166, 255, 0.25);
   transform: translateY(-1px);
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .tech-stack {
+    gap: 8px;
+  }
+  
+  .tech-tag {
+    padding: 4px 12px;
+    font-size: 0.8rem;
+  }
 }
 
 /* Description */
@@ -324,30 +337,91 @@
   box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
 }
 
-/* Responsive */
+/* Responsive - Mobile First */
 @media (max-width: 768px) {
+  .project-card {
+    border-radius: 12px;
+  }
+  
   .project-content {
-    padding: 18px;
+    padding: 16px;
   }
 
   .project-title {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 
   .project-tagline {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
   }
 
   .project-meta {
-    gap: 10px;
+    gap: 8px;
+    flex-wrap: wrap;
   }
 
   .meta-item {
     font-size: 0.8rem;
   }
+  
+  .project-description {
+    font-size: 0.9rem;
+  }
+  
+  .project-description:not(.expanded) {
+    max-height: 100px;
+  }
 
   .project-links {
     flex-direction: column;
+    gap: 8px;
+  }
+  
+  .project-link {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+  
+  .metrics-section {
+    gap: 12px;
+    padding: 10px;
+  }
+  
+  .metric-value {
+    font-size: 1.25rem;
+  }
+  
+  .featured-badge {
+    padding: 4px 10px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-content {
+    padding: 14px;
+  }
+  
+  .project-title {
+    font-size: 1.1rem;
+  }
+  
+  .project-header {
+    margin-bottom: 12px;
+  }
+  
+  .tech-tag {
+    padding: 3px 8px;
+    font-size: 0.7rem;
+  }
+  
+  .achievements-section h4 {
+    font-size: 0.9rem;
+  }
+  
+  .achievements-list li {
+    font-size: 0.8rem;
+    padding-left: 16px;
   }
 
   .metric-value {

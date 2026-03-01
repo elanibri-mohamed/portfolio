@@ -7,14 +7,24 @@
    Section Container
    -------------------------------------------- */
 .education-section {
-  padding: 140px 0 80px;
+  padding: 100px 0 60px;
   background: linear-gradient(180deg, #0a0a0a 0%, #0f0f1a 50%, #0a0a0a 100%);
   min-height: 100vh;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
+  width: 100%;
   position: relative;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .education-section {
+    padding: 120px 0 70px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .education-section {
+    padding: 140px 0 80px;
+  }
 }
 
 .education-section::before {
@@ -33,9 +43,15 @@
 .education-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 16px;
   position: relative;
   z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .education-container {
+    padding: 0 24px;
+  }
 }
 
 /* --------------------------------------------

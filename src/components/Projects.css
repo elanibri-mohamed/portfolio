@@ -23,34 +23,37 @@
 }
 
 /* ============================================
-   FILTER BUTTONS
-   ============================================ */
+    FILTER BUTTONS - MOBILE-FIRST
+    ============================================ */
 
 .projects__filters {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  margin-bottom: 40px;
+  gap: 8px;
+  margin-bottom: 32px;
   flex-wrap: wrap;
+  padding: 0 0.5rem;
 }
 
 .projects__filter-icon {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #00d4ff;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 .projects__filter-btn {
-  padding: 10px 24px;
+  padding: 8px 16px;
   background: rgba(0, 212, 255, 0.05);
   border: 1px solid rgba(0, 212, 255, 0.2);
-  border-radius: 30px;
+  border-radius: 24px;
   color: #b0b0c0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
+  min-height: 40px;
+  white-space: nowrap;
 }
 
 .projects__filter-btn:hover {
@@ -72,15 +75,57 @@
   color: #000;
 }
 
+/* Touch device optimizations */
+@media (hover: none) {
+  .projects__filter-btn:hover {
+    transform: none;
+    background: rgba(0, 212, 255, 0.05);
+    border-color: rgba(0, 212, 255, 0.2);
+    color: #b0b0c0;
+  }
+  
+  .projects__filter-btn--active:hover {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: #000;
+  }
+  
+  .projects__filter-btn:active {
+    transform: scale(0.95);
+  }
+}
+
 /* ============================================
-   PROJECTS GRID
-   ============================================ */
+    PROJECTS GRID - MOBILE-FIRST
+    ============================================ */
 
 .projects__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   align-items: stretch;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .projects__grid {
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 30px;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1400px) {
+  .projects__grid {
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  }
 }
 
 /* ============================================
@@ -98,33 +143,48 @@
 }
 
 /* ============================================
-   RESPONSIVE STYLES
-   ============================================ */
+    CONTAINER PADDING - MOBILE-FIRST
+    ============================================ */
 
-@media (max-width: 1200px) {
-  .projects__grid {
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 24px;
+.projects__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .projects__container {
+    padding: 0 24px;
+  }
+  
+  .projects__filters {
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  
+  .projects__filter-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }
+
+@media (min-width: 1024px) {
+  .projects__container {
+    padding: 0 32px;
+  }
+  
+  .projects__filter-btn {
+    padding: 10px 24px;
+  }
+}
+
+/* ============================================
+    RESPONSIVE STYLES - LEGACY SUPPORT
+    ============================================ */
 
 @media (max-width: 768px) {
   .projects {
     padding: 100px 0 60px;
-  }
-
-  .projects__filters {
-    gap: 8px;
-  }
-
-  .projects__filter-btn {
-    padding: 8px 18px;
-    font-size: 0.85rem;
-  }
-
-  .projects__grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
   }
 
   .projects__empty {
@@ -134,23 +194,18 @@
 }
 
 @media (max-width: 480px) {
-  .projects__container {
-    padding: 0 16px;
+  .projects {
+    padding: 90px 0 50px;
   }
-
+  
   .projects__filters {
-    flex-direction: column;
-    gap: 10px;
+    gap: 6px;
   }
-
+  
   .projects__filter-btn {
-    width: 100%;
-    max-width: 200px;
-  }
-
-  .projects__grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    min-height: 36px;
   }
 }
 

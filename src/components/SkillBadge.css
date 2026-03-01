@@ -147,20 +147,61 @@
   .skill-badge {
     padding: 10px 12px;
   }
-
+  
   .skill-name {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
   }
+  
+  .skill-icon {
+    font-size: 1.1rem;
+    min-width: 20px;
+  }
+}
 
+@media (max-width: 480px) {
+  .skill-badge {
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+  
+  .skill-badge-content {
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  
+  .skill-name {
+    font-size: 0.8rem;
+  }
+  
   .skill-icon {
     font-size: 1rem;
+    min-width: 18px;
   }
+  
+  .certification-badge {
+    font-size: 0.8rem;
+  }
+  
+  .skill-level-indicator {
+    height: 3px;
+  }
+}
 
+/* Hide tooltip on touch devices */
+@media (hover: none) {
   .skill-tooltip {
-    min-width: 160px;
-    max-width: 220px;
-    padding: 10px 12px;
+    display: none !important;
   }
+}
+
+/* Touch feedback */
+.skill-badge {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.skill-badge:active {
+  transform: scale(0.98);
+  opacity: 0.9;
 }
 
 /* Focus styles for accessibility */
