@@ -213,7 +213,7 @@
 
 @media (max-width: 768px) {
   .education-section {
-    padding: 60px 0;
+    padding: 100px 0 60px;
   }
 
   .education-container {
@@ -257,7 +257,7 @@
 
 @media (max-width: 480px) {
   .education-section {
-    padding: 40px 0;
+    padding: 80px 0 40px;
   }
 
   .section-header {

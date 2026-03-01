@@ -158,9 +158,9 @@ const Home = ({ onNavigate }) => {
               <span className="home__greeting-text">Hello, I'm</span>
             </motion.div>
 
-            <motion.h1 variants={itemVariants} className="home__name">
+            <h1 className="home__name">
               ELANIBRI MOHAMED
-            </motion.h1>
+            </h1>
 
             <motion.div variants={itemVariants} className="home__title-wrapper">
               <span className="home__title-prefix">{'>'}</span>
