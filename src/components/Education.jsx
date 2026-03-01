@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaGraduationCap, FaUniversity } from 'react-icons/fa';
 import EducationCard from './EducationCard';
 import './Education.css';
+import ensamLogo from '../assets/ensam.svg';
 
 /**
  * Education Component
@@ -19,12 +20,12 @@ const Education = () => {
       degree: "Engineer's Diploma",
       fieldOfStudy: 'Cybersecurity & Cloud Computing',
       institution: 'ENSAM Casablanca',
-      institutionLogo: '/ensam.svg',
+      institutionLogo: ensamLogo,
       location: 'Casablanca, Morocco',
       startDate: '2024',
       endDate: '2027',
       summary: 'Currently pursuing an advanced engineering degree with focus on cybersecurity, cloud infrastructure, and network security. Gaining hands-on experience with enterprise security tools, cloud platforms, and modern DevSecOps practices.',
-      gpa: '3.8/4.0',
+      gpa: '',
       specialization: 'Cybersecurity Focus',
       skillTags: [
         'Network Security',
@@ -73,7 +74,7 @@ const Education = () => {
     },
     {
       id: 2,
-      degree: "Associate's Degree (DUT)",
+      degree: "Associate's Degree (BTS)",
       fieldOfStudy: 'Computer Science & Networking',
       institution: 'ALFARABI High School',
       institutionLogo: null,
