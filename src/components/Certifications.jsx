@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaExternalLinkAlt, FaChevronDown, FaAward } from 'react-icons/fa';
-import SectionTitle from './ui/SectionTitle';
 import fortinetBadge from '../assets/certs/fortinet-fortigate-7-4-administrator.jpg';
 import awsBadge from '../assets/certs/aws-cloudFoundations.png';
 import './Certifications.css';
@@ -162,14 +161,40 @@ const Certifications = () => {
     });
   }, []);
 
+  // Animation variants
+  const headerVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    }
+  };
+
   return (
     <section className="certifications" id="certifications" aria-labelledby="certifications-heading">
       <div className="certifications__container">
-        <SectionTitle
-          icon={<FaAward />}
-          title="Certifications"
-          subtitle="Professional certifications validating expertise in cybersecurity and cloud technologies"
-        />
+        {/* Section Header */}
+        <motion.div
+          className="section-header"
+          variants={headerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <div className="section-icon-wrapper">
+            <FaAward className="section-icon" />
+          </div>
+          <h2 id="certifications-heading" className="section-title">
+            Certifications
+          </h2>
+          <p className="section-subtitle">
+            Professional certifications validating expertise in cybersecurity and cloud technologies
+          </p>
+        </motion.div>
 
         <div className="certifications__list" role="list">
           {CERTIFICATIONS_DATA.map((cert, index) => (
