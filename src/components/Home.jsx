@@ -197,7 +197,7 @@ const Home = ({ onNavigate }) => {
                 variant="secondary" 
                 size="large"
                 icon={FaDownload}
-                href="/ELANIBRI-Mohamed_Resume.pdf"
+                href="ELANIBRI-Mohamed_Resume.pdf"
                 download
               >
                 Download CV

@@ -41,7 +41,7 @@ const Contact = () => {
     location: 'Casablanca, Morocco',
     linkedin: 'https://www.linkedin.com/in/elanibri-mohamed',
     github: 'https://github.com/elanibri',
-    resumePath: '/ELANIBRI-Mohamed_Resume.pdf'
+    resumePath: 'ELANIBRI-Mohamed_Resume.pdf'
   };
 
   // Validation functions
