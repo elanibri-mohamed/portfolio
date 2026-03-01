@@ -1,11 +1,12 @@
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  FaLinkedin, 
-  FaGithub, 
-  FaEnvelope, 
-  FaPhone, 
-  FaMapMarkerAlt, 
+import emailjs from '@emailjs/browser';
+import {
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
   FaPaperPlane,
   FaCheckCircle,
   FaExclamationCircle,
@@ -16,6 +17,13 @@ import {
   FaCloud
 } from 'react-icons/fa';
 import './Contact.css';
+
+// EmailJS configuration
+const EMAILJS_CONFIG = {
+  SERVICE_ID: 'service_96qa7si',
+  TEMPLATE_ID: 'template_jlzq23n',
+  PUBLIC_KEY: '-Pw0JM1xRb99AFGor'
+};
 
 const Contact = () => {
   // Form state
@@ -107,19 +115,21 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // Simulate form submission (replace with actual EmailJS or API call)
+    // Send email using EmailJS
     try {
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // For production, integrate with EmailJS:
-      // import emailjs from '@emailjs/browser';
-      // await emailjs.sendForm(
-      //   'YOUR_SERVICE_ID',
-      //   'YOUR_TEMPLATE_ID',
-      //   formRef.current,
-      //   'YOUR_PUBLIC_KEY'
-      // );
+      const templateParams = {
+        from_name: formData.fullName,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message
+      };
+
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams,
+        EMAILJS_CONFIG.PUBLIC_KEY
+      );
 
       setSubmitStatus('success');
       setFormData({
@@ -130,6 +140,7 @@ const Contact = () => {
         honeypot: ''
       });
     } catch (error) {
+      console.error('EmailJS Error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
