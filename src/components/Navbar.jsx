@@ -129,9 +129,6 @@ const Navbar = ({ currentPage, onNavigate }) => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMobileMenuOpen}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
           >
             <motion.div
               animate={{ rotate: isMobileMenuOpen ? 180 : 0 }}
