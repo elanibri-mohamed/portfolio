@@ -158,7 +158,7 @@
    ============================================ */
 
 .navbar__toggle {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 48px;
@@ -171,7 +171,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   -webkit-tap-highlight-color: transparent;
-  z-index: 1000;
+  z-index: 1001;
   position: relative;
 }
 
@@ -515,6 +515,13 @@
 /* ============================================
    ACCESSIBILITY
    ============================================ */
+
+/* Hide toggle on desktop screens (1100px and above) */
+@media (min-width: 1101px) {
+  .navbar__toggle {
+    display: none !important;
+  }
+}
 
 .navbar__link:focus-visible,
 .navbar__toggle:focus-visible,
