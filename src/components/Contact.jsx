@@ -10,8 +10,6 @@ import {
   FaPaperPlane,
   FaCheckCircle,
   FaExclamationCircle,
-  FaCopy,
-  FaCheck,
   FaDownload,
   FaShieldAlt,
   FaCloud
@@ -39,7 +37,6 @@ const Contact = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
-  const [copiedEmail, setCopiedEmail] = useState(false);
   const formRef = useRef(null);
 
   // Contact information
@@ -144,17 +141,6 @@ const Contact = () => {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
-    }
-  };
-
-  // Copy email to clipboard
-  const copyToClipboard = async () => {
-    try {
-      await navigator.clipboard.writeText(contactInfo.email);
-      setCopiedEmail(true);
-      setTimeout(() => setCopiedEmail(false), 2000);
-    } catch (err) {
-      console.error('Failed to copy email:', err);
     }
   };
 
@@ -384,14 +370,6 @@ const Contact = () => {
                       >
                         {contactInfo.email}
                       </a>
-                      <button 
-                        className="copy-btn"
-                        onClick={copyToClipboard}
-                        title={copiedEmail ? 'Copied!' : 'Copy email'}
-                        aria-label={copiedEmail ? 'Email copied' : 'Copy email to clipboard'}
-                      >
-                        {copiedEmail ? <FaCheck /> : <FaCopy />}
-                      </button>
                     </div>
                   </div>
                 </div>

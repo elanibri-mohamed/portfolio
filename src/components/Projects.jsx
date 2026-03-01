@@ -1,7 +1,6 @@
 import React, { useState, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaFolderOpen, FaFilter } from 'react-icons/fa';
-import SectionTitle from './ui/SectionTitle';
 import ProjectCard from './ProjectCard';
 import './Projects.css';
 
@@ -146,14 +145,40 @@ const Projects = () => {
     setActiveFilter(category);
   }, []);
 
+  // Animation variants
+  const headerVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    }
+  };
+
   return (
     <section className="projects" id="projects" aria-labelledby="projects-heading">
       <div className="projects__container">
-        <SectionTitle
-          icon={<FaFolderOpen />}
-          title="Projects"
-          subtitle="Hands-on projects demonstrating cybersecurity and cloud engineering expertise"
-        />
+        {/* Section Header */}
+        <motion.div
+          className="section-header"
+          variants={headerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <div className="section-icon-wrapper">
+            <FaFolderOpen className="section-icon" />
+          </div>
+          <h2 id="projects-heading" className="section-title">
+            Projects
+          </h2>
+          <p className="section-subtitle">
+            Hands-on projects demonstrating cybersecurity and cloud engineering expertise
+          </p>
+        </motion.div>
 
         {/* Filter Tabs */}
         <div className="projects__filters" role="tablist" aria-label="Filter projects by category">
