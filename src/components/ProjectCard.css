@@ -1,0 +1,356 @@
+.project-card {
+  background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 40px rgba(0, 102, 204, 0.3);
+}
+
+.project-card.featured {
+  border: 2px solid #ffd700;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.2);
+}
+
+.project-card.featured:hover {
+  box-shadow: 0 8px 40px rgba(255, 215, 0, 0.4);
+}
+
+/* Featured Badge */
+.featured-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #1a1a2e;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.featured-icon {
+  font-size: 0.8rem;
+}
+
+/* Project Image */
+.project-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  background: #0f0f1a;
+}
+
+.project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-image-overlay {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.project-category {
+  background: rgba(0, 102, 204, 0.9);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Project Content */
+.project-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-header {
+  margin-bottom: 16px;
+}
+
+.project-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.project-tagline {
+  font-size: 0.95rem;
+  color: #a0a0b0;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Meta Information */
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #808090;
+}
+
+.meta-icon {
+  font-size: 0.9rem;
+  color: #58a6ff;
+}
+
+/* Tech Stack */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tech-tag {
+  background: rgba(88, 166, 255, 0.15);
+  color: #58a6ff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(88, 166, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(88, 166, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Description */
+.project-description {
+  flex-grow: 1;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.project-description:not(.expanded) {
+  max-height: 120px;
+}
+
+.project-description.expanded {
+  max-height: 1000px;
+}
+
+.description-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #c0c0d0;
+  margin: 0 0 16px 0;
+}
+
+/* Achievements */
+.achievements-section {
+  margin-bottom: 16px;
+}
+
+.achievements-section h4 {
+  font-size: 0.95rem;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.achievements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  color: #b0b0c0;
+  line-height: 1.5;
+}
+
+.achievements-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #58a6ff;
+  font-weight: bold;
+}
+
+/* Metrics */
+.metrics-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #58a6ff;
+  line-height: 1;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: #808090;
+  margin-top: 4px;
+}
+
+/* Expand Button */
+.expand-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  background: transparent;
+  border: 1px solid rgba(88, 166, 255, 0.4);
+  border-radius: 8px;
+  color: #58a6ff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.expand-button:hover {
+  background: rgba(88, 166, 255, 0.1);
+  border-color: #58a6ff;
+}
+
+.expand-icon {
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+/* Project Links */
+.project-links {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.project-link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.link-icon {
+  font-size: 1rem;
+}
+
+.github-link {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.github-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.demo-link {
+  background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+  color: #ffffff;
+  border: none;
+}
+
+.demo-link:hover {
+  background: linear-gradient(135deg, #0077e6 0%, #0066cc 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-content {
+    padding: 18px;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-tagline {
+    font-size: 0.9rem;
+  }
+
+  .project-meta {
+    gap: 10px;
+  }
+
+  .meta-item {
+    font-size: 0.8rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .metric-value {
+    font-size: 1.2rem;
+  }
+}

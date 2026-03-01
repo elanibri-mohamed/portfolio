@@ -1,23 +1,169 @@
+/* ============================================
+   PROJECTS SECTION
+   ============================================ */
+
 .projects {
-  width: 100%;
+  padding: 120px 0 80px;
+  background: linear-gradient(180deg, #0a0a0a 0%, #0f0f1a 50%, #0a0a0a 100%);
+  color: #e0e0e0;
+  min-height: 100vh;
+  position: relative;
 }
 
-.projects h2 {
+.projects__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section title styling override */
+.projects .section-title {
   text-align: center;
-  margin-bottom: 20px;
-  padding: 20px;
+  margin-bottom: 40px;
 }
 
-.project {
-  background: #f4f4f4;
-  margin: 0 auto 20px auto;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 100%;
+/* ============================================
+   FILTER BUTTONS
+   ============================================ */
+
+.projects__filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.projects__filter-icon {
+  font-size: 0.9rem;
+  color: #00d4ff;
+  margin-right: 8px;
+}
+
+.projects__filter-btn {
+  padding: 10px 24px;
+  background: rgba(0, 212, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 30px;
+  color: #b0b0c0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.projects__filter-btn:hover {
+  background: rgba(0, 212, 255, 0.15);
+  border-color: rgba(0, 212, 255, 0.4);
+  color: #00d4ff;
+  transform: translateY(-2px);
+}
+
+.projects__filter-btn--active {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  border-color: #00d4ff;
+  color: #000;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+}
+
+.projects__filter-btn--active:hover {
+  background: linear-gradient(135deg, #00e5ff 0%, #00aadd 100%);
+  color: #000;
+}
+
+/* ============================================
+   PROJECTS GRID
+   ============================================ */
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* ============================================
+   EMPTY STATE
+   ============================================ */
+
+.projects__empty {
   text-align: center;
+  padding: 60px 20px;
+  background: rgba(0, 212, 255, 0.05);
+  border-radius: 16px;
+  border: 1px dashed rgba(0, 212, 255, 0.2);
+  color: #888;
+  font-size: 1.1rem;
 }
 
-.project h3 {
-  margin-top: 0;
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 1200px) {
+  .projects__grid {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 100px 0 60px;
+  }
+
+  .projects__filters {
+    gap: 8px;
+  }
+
+  .projects__filter-btn {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .projects__empty {
+    padding: 40px 16px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects__container {
+    padding: 0 16px;
+  }
+
+  .projects__filters {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .projects__filter-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .projects__filter-btn {
+    transition: none;
+  }
+
+  .projects__filter-btn:hover {
+    transform: none;
+  }
 }

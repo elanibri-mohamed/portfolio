@@ -1,0 +1,635 @@
+/* ============================================
+   EDUCATION CARD COMPONENT STYLES
+   Professional Cybersecurity Theme
+   ============================================ */
+
+/* --------------------------------------------
+   Education Wrapper
+   -------------------------------------------- */
+.education-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.education-wrapper.timeline {
+  padding-left: 60px;
+}
+
+/* --------------------------------------------
+   Timeline Marker
+   -------------------------------------------- */
+.timeline-marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+  border: 3px solid #58a6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #58a6ff;
+  font-size: 1.2rem;
+  box-shadow:
+    0 0 20px rgba(88, 166, 255, 0.4),
+    inset 0 0 10px rgba(88, 166, 255, 0.1);
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.timeline-line {
+  width: 3px;
+  flex: 1;
+  background: linear-gradient(
+    180deg,
+    #58a6ff 0%,
+    rgba(88, 166, 255, 0.3) 50%,
+    transparent 100%
+  );
+  margin-top: 10px;
+  min-height: 50px;
+}
+
+.education-wrapper:last-child .timeline-line {
+  display: none;
+}
+
+/* --------------------------------------------
+   Base Card Styles
+   -------------------------------------------- */
+.education-card {
+  background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(88, 166, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #58a6ff 0%, #00d4ff 50%, #58a6ff 100%);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(88, 166, 255, 0.3),
+    0 0 30px rgba(88, 166, 255, 0.15);
+}
+
+.education-card:hover::before {
+  opacity: 1;
+}
+
+/* --------------------------------------------
+   Specialization Badge
+   -------------------------------------------- */
+.specialization-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(88, 166, 255, 0.15) 0%, rgba(0, 212, 255, 0.15) 100%);
+  border: 1px solid rgba(88, 166, 255, 0.3);
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #58a6ff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-icon {
+  font-size: 0.85rem;
+}
+
+/* --------------------------------------------
+   Header Section
+   -------------------------------------------- */
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  padding-right: 100px;
+}
+
+.education-title-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.education-degree {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.3;
+}
+
+.title-icon {
+  color: #58a6ff;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.education-field {
+  font-size: 1rem;
+  color: #8b949e;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* --------------------------------------------
+   GPA Badge
+   -------------------------------------------- */
+.gpa-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 165, 0, 0.15) 100%);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #ffd700;
+  font-weight: 600;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.gpa-icon {
+  color: #ffd700;
+  font-size: 0.9rem;
+}
+
+/* --------------------------------------------
+   Institution Info
+   -------------------------------------------- */
+.education-institution {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: rgba(88, 166, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(88, 166, 255, 0.1);
+}
+
+.institution-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px;
+  border: 1px solid rgba(88, 166, 255, 0.2);
+}
+
+.institution-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.institution-name,
+.institution-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #c9d1d9;
+}
+
+.institution-name {
+  font-weight: 600;
+  color: #e6edf3;
+}
+
+.info-icon {
+  color: #58a6ff;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------
+   Date Range
+   -------------------------------------------- */
+.education-date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #8b949e;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.date-icon {
+  color: #00d4ff;
+  font-size: 1rem;
+}
+
+/* --------------------------------------------
+   Summary
+   -------------------------------------------- */
+.education-summary {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #c9d1d9;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border-left: 3px solid #58a6ff;
+}
+
+/* --------------------------------------------
+   Skill Tags
+   -------------------------------------------- */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, rgba(88, 166, 255, 0.1) 0%, rgba(0, 212, 255, 0.1) 100%);
+  border: 1px solid rgba(88, 166, 255, 0.25);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #58a6ff;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: linear-gradient(135deg, rgba(88, 166, 255, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%);
+  border-color: rgba(88, 166, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------
+   Expandable Content
+   -------------------------------------------- */
+.expandable-content {
+  overflow: hidden;
+  border-top: 1px solid rgba(88, 166, 255, 0.1);
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.content-section {
+  margin-bottom: 20px;
+}
+
+.content-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+}
+
+.section-icon {
+  color: #00d4ff;
+  font-size: 1rem;
+}
+
+/* Coursework List */
+.coursework-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 8px;
+}
+
+.coursework-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #c9d1d9;
+  padding: 6px 10px;
+  background: rgba(88, 166, 255, 0.05);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.coursework-item:hover {
+  background: rgba(88, 166, 255, 0.1);
+}
+
+.coursework-item .bullet {
+  color: #00d4ff;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Projects List */
+.projects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px;
+  background: rgba(88, 166, 255, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid #00d4ff;
+}
+
+.project-item .bullet {
+  color: #00d4ff;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.project-content {
+  flex: 1;
+}
+
+.project-name {
+  display: block;
+  color: #ffffff;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.project-description {
+  font-size: 0.85rem;
+  color: #8b949e;
+  margin: 0 0 8px 0;
+  line-height: 1.5;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-tag {
+  background: rgba(0, 212, 255, 0.15);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  color: #00d4ff;
+}
+
+/* Achievements List */
+.achievements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #c9d1d9;
+  padding: 8px 12px;
+  background: linear-gradient(90deg, rgba(255, 215, 0, 0.1) 0%, transparent 100%);
+  border-radius: 6px;
+  border-left: 3px solid #ffd700;
+}
+
+.achievement-icon {
+  font-size: 1.1rem;
+}
+
+/* --------------------------------------------
+   Expand Button
+   -------------------------------------------- */
+.expand-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  margin-top: 16px;
+  background: linear-gradient(135deg, rgba(88, 166, 255, 0.1) 0%, rgba(0, 212, 255, 0.1) 100%);
+  border: 1px solid rgba(88, 166, 255, 0.2);
+  border-radius: 8px;
+  color: #58a6ff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.expand-button:hover {
+  background: linear-gradient(135deg, rgba(88, 166, 255, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%);
+  border-color: rgba(88, 166, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);
+}
+
+.expand-button.expanded {
+  background: linear-gradient(135deg, rgba(88, 166, 255, 0.15) 0%, rgba(0, 212, 255, 0.15) 100%);
+}
+
+.expand-text {
+  font-weight: 600;
+}
+
+/* --------------------------------------------
+   Responsive Design
+   -------------------------------------------- */
+@media (max-width: 768px) {
+  .education-wrapper.timeline {
+    padding-left: 45px;
+  }
+
+  .timeline-marker {
+    width: 45px;
+  }
+
+  .timeline-dot {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .education-card {
+    padding: 20px;
+  }
+
+  .education-header {
+    padding-right: 0;
+    flex-direction: column;
+  }
+
+  .specialization-badge {
+    position: static;
+    align-self: flex-start;
+    margin-bottom: 12px;
+  }
+
+  .education-degree {
+    font-size: 1.15rem;
+  }
+
+  .gpa-badge {
+    align-self: flex-start;
+  }
+
+  .education-institution {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .institution-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .coursework-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-wrapper.timeline {
+    padding-left: 35px;
+  }
+
+  .timeline-marker {
+    width: 35px;
+  }
+
+  .timeline-dot {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  .education-card {
+    padding: 16px;
+  }
+
+  .education-degree {
+    font-size: 1.05rem;
+    gap: 8px;
+  }
+
+  .title-icon {
+    font-size: 1.1rem;
+  }
+
+  .skill-tags {
+    gap: 6px;
+  }
+
+  .skill-tag {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+
+  .project-item {
+    padding: 10px;
+  }
+
+  .achievement-item {
+    font-size: 0.85rem;
+  }
+}
+
+/* --------------------------------------------
+   Accessibility Improvements
+   -------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .education-card,
+  .skill-tag,
+  .coursework-item,
+  .expand-button {
+    transition: none;
+  }
+
+  .education-card:hover {
+    transform: none;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+.expand-button:focus-visible {
+  outline: 2px solid #58a6ff;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .education-card {
+    border: 2px solid #58a6ff;
+  }
+
+  .timeline-dot {
+    border-width: 4px;
+  }
+
+  .skill-tag,
+  .gpa-badge,
+  .specialization-badge {
+    border-width: 2px;
+  }
+}
