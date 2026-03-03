@@ -163,13 +163,6 @@ const Navbar = ({ currentPage, onNavigate }) => {
             >
               <div className="navbar__mobile-header">
                 <span className="navbar__mobile-title">Menu</span>
-                <button
-                  className="navbar__mobile-close"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  aria-label="Close menu"
-                >
-                  <FaTimes />
-                </button>
               </div>
 
               <ul className="navbar__mobile-list">
