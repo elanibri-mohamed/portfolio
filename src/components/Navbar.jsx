@@ -63,6 +63,7 @@ const Navbar = ({ currentPage, onNavigate }) => {
   const handleNavClick = (pageId) => {
     onNavigate(pageId);
     setIsMobileMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
