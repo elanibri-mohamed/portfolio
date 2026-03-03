@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaExternalLinkAlt, FaChevronDown, FaAward } from 'react-icons/fa';
 import fortinetBadge from '../assets/certs/fortinet-fortigate-7-4-administrator.jpg';
 import awsBadge from '../assets/certs/aws-cloudFoundations.png';
+import NetTechBadge from '../assets/certs/network-technician-career-path.png';
 import './Certifications.css';
 
 /**
@@ -14,13 +15,13 @@ const CERTIFICATIONS_DATA = [
     id: 'fortinet-fortigate-2025',
     title: 'Fortinet FortiGate 7.4 Administrator',
     organization: 'Fortinet',
-    issueDate: 'September 2025',
-    expiryDate: 'September 2027',
+    issueDate: 'Sep 2025',
+    expiryDate: '',
     badge: fortinetBadge,
     alt: 'Fortinet FortiGate 7.4 Administrator certification badge',
     verificationLink: 'https://www.credly.com/badges/7bd95ad0-3213-418b-85a8-fd71e3dd6da3/public_url',
     description: 'Professional certification validating expertise in configuring and managing FortiGate firewalls, including security policies, VPNs, high availability, and advanced security features.',
-    credentialId: 'NSE4-FGT74',
+    credentialId: '',
     status: 'Active',
     skills: ['Firewall Management', 'VPN Configuration', 'Network Security', 'UTM'],
   },
@@ -28,14 +29,27 @@ const CERTIFICATIONS_DATA = [
     id: 'aws-cloud-foundations-2026',
     title: 'AWS Cloud Foundations',
     organization: 'Amazon Web Services',
-    issueDate: 'January 2026',
+    issueDate: 'Jan 2026',
     badge: awsBadge,
     alt: 'AWS Cloud Foundations certification badge',
     verificationLink: 'https://www.credly.com/badges/b2a62a0b-48d7-40dd-9332-1b035da3ba83/public_url',
     description: 'Foundational certification covering core AWS services, cloud concepts, security best practices, and architectural principles for building on AWS.',
-    credentialId: 'AWS-CF-2026',
+    credentialId: '',
     status: 'Active',
     skills: ['AWS Core Services', 'Cloud Architecture', 'Security Best Practices', 'Cost Management'],
+  },
+  {
+    id: 'network-technician-career-path-2026',
+    title: 'Network Technician Career Path',
+    organization: 'Cisco Networking Academy',
+    issueDate: 'Jan 2026',
+    badge: NetTechBadge,
+    alt: 'network-technician-career-path.png certification badge',
+    verificationLink: 'https://www.credly.com/badges/044c34b7-e448-4e42-b90a-87c8452bc4fb/public_url',
+    description: 'Validating fundamental skills in networking, devices, and troubleshooting',
+    credentialId: '',
+    status: 'Active',
+    skills: ['Networking', 'Network protocols', 'Network security', 'Troubleshooting'],
   },
 ];
 
