@@ -435,6 +435,8 @@
     border: 2px solid rgba(0, 212, 255, 0.5) !important;
     opacity: 1 !important;
     visibility: visible !important;
+    color: #00d4ff !important;
+    font-size: 1.5rem !important;
   }
   
   /* Mobile menu improvements */
