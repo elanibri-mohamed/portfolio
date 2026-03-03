@@ -8,7 +8,6 @@ import {
   FaCertificate, 
   FaGraduationCap, 
   FaEnvelope,
-  FaBars,
   FaTimes
 } from 'react-icons/fa';
 import './Navbar.css';
@@ -124,19 +123,15 @@ const Navbar = ({ currentPage, onNavigate }) => {
           </ul>
 
           {/* Mobile Menu Toggle */}
-          <motion.button
+          <button
             className="navbar__toggle"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={isMobileMenuOpen}
+            onClick={() => setIsMobileMenuOpen(true)}
+            aria-label="Open menu"
           >
-            <motion.div
-              animate={{ rotate: isMobileMenuOpen ? 180 : 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-            </motion.div>
-          </motion.button>
+            <span className="navbar__toggle-dot"></span>
+            <span className="navbar__toggle-dot"></span>
+            <span className="navbar__toggle-dot"></span>
+          </button>
         </div>
       </nav>
 

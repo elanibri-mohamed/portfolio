@@ -29,6 +29,47 @@
   justify-content: space-between;
 }
 
+/* Mobile Menu Toggle - Three Dots */
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.navbar__toggle-dot {
+  width: 6px;
+  height: 6px;
+  background: #00d4ff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.navbar__toggle:hover {
+  background: rgba(0, 212, 255, 0.2);
+  border-color: rgba(0, 212, 255, 0.4);
+}
+
+.navbar__toggle:active {
+  transform: scale(0.95);
+}
+
+/* Mobile: Show three dots toggle */
+@media (max-width: 1100px) {
+  .navbar__toggle {
+    display: flex;
+  }
+}
+
 /* ============================================
    BRAND / LOGO
    ============================================ */
@@ -154,54 +195,7 @@
 }
 
 /* ============================================
-   MOBILE MENU TOGGLE
-   ============================================ */
-
-.navbar__toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  background: rgba(0, 212, 255, 0.1);
-  border: 1px solid rgba(0, 212, 255, 0.2);
-  border-radius: 12px;
-  color: #00d4ff;
-  font-size: 1.4rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  -webkit-tap-highlight-color: transparent;
-  z-index: 1001;
-  position: relative;
-}
-
-.navbar__toggle:hover {
-  background: rgba(0, 212, 255, 0.2);
-  border-color: rgba(0, 212, 255, 0.4);
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
-}
-
-.navbar__toggle:active {
-  transform: scale(0.95);
-  background: rgba(0, 212, 255, 0.25);
-}
-
-/* Touch device optimizations */
-@media (hover: none) {
-  .navbar__toggle:hover {
-    background: rgba(0, 212, 255, 0.1);
-    border-color: rgba(0, 212, 255, 0.2);
-    box-shadow: none;
-  }
-  
-  .navbar__toggle:active {
-    background: rgba(0, 212, 255, 0.25);
-    border-color: rgba(0, 212, 255, 0.4);
-  }
-}
-
-/* ============================================
-   MOBILE MENU OVERLAY & PANEL
+   RESPONSIVE DESIGN - MOBILE-FIRST
    ============================================ */
 
 .navbar__backdrop {
@@ -427,18 +421,6 @@
     display: none;
   }
 
-  .navbar__toggle {
-    display: flex !important;
-    width: 48px;
-    height: 48px;
-    background: rgba(0, 212, 255, 0.2) !important;
-    border: 2px solid rgba(0, 212, 255, 0.5) !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    color: #00d4ff !important;
-    font-size: 1.5rem !important;
-  }
-  
   /* Mobile menu improvements */
   .navbar__mobile-menu {
     max-width: 100%;
