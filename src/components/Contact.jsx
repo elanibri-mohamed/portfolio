@@ -45,7 +45,7 @@ const Contact = () => {
     phone: '+212 653-785089',
     location: 'Casablanca, Morocco',
     linkedin: 'https://www.linkedin.com/in/elanibri-mohamed',
-    github: 'https://github.com/elanibri',
+    github: 'https://github.com/elanibri-mohamed/',
     resumePath: 'ELANIBRI-Mohamed_Resume.pdf'
   };
 
