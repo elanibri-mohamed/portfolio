@@ -3,7 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaFolderOpen, FaFilter } from 'react-icons/fa';
 import ProjectCard from './ProjectCard';
 import './Projects.css';
-
+import IDSproject from '../assets/projects/ids-ips-project.png';
+import cloudAutomation from '../assets/projects/cloud-automation.jpg';
+import networkSecurity from '../assets/projects/network-security.png';
+import siemProject from '../assets/projects/siem-project.jpg';
 /**
  * Projects Data
  * Using relative paths for GitHub Pages compatibility
@@ -13,7 +16,7 @@ const PROJECTS_DATA = [
     id: 'enterprise-ids-ips',
     title: 'Enterprise IDS/IPS Security System',
     tagline: 'Complete network security implementation with real-time threat detection',
-    image: '/projects/ids-ips-project.jpg',
+    image: IDSproject,
     fallbackImage: '/background.jpeg',
     category: 'Security',
     techStack: ['Snort', 'Ubuntu Server', 'Cisco ASA', 'OSPF', 'VLAN', 'STP'],
@@ -40,7 +43,7 @@ const PROJECTS_DATA = [
     id: 'cloud-infrastructure-automation',
     title: 'Cloud Infrastructure Automation',
     tagline: 'AWS-based infrastructure with Terraform automation and CI/CD pipeline',
-    image: '/projects/cloud-automation.jpg',
+    image: cloudAutomation,
     fallbackImage: '/background.jpeg',
     category: 'Cloud',
     techStack: ['AWS', 'Terraform', 'Docker', 'GitHub Actions', 'Python', 'Bash'],
@@ -67,7 +70,7 @@ const PROJECTS_DATA = [
     id: 'secure-network-architecture',
     title: 'Secure Network Architecture Design',
     tagline: 'Multi-layer network security with DMZ, firewall clustering, and VPN',
-    image: '/projects/network-security.jpg',
+    image: networkSecurity,
     fallbackImage: '/background.jpeg',
     category: 'Networking',
     techStack: ['Cisco IOS', 'Palo Alto', 'WireGuard', 'BGP', 'HSRP', 'NAT'],
@@ -94,7 +97,7 @@ const PROJECTS_DATA = [
     id: 'siem-implementation',
     title: 'SIEM Implementation & Log Analysis',
     tagline: 'Centralized security monitoring with ELK Stack and custom dashboards',
-    image: '/projects/siem-project.jpg',
+    image: siemProject,
     fallbackImage: '/background.jpeg',
     category: 'Security',
     techStack: ['ELK Stack', 'Syslog', 'Linux', 'Python', 'REST API', 'Grafana'],
