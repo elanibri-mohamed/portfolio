@@ -65,11 +65,6 @@ const Education = () => {
           description: 'Built a virtualized lab environment for practicing ethical hacking techniques and vulnerability assessment.',
           technologies: ['Kali Linux', 'Metasploit', 'Wireshark', 'Nmap', 'VirtualBox']
         }
-      ],
-      achievements: [
-        'Dean\'s List - Academic Excellence 2024-2025',
-        'Winner - ENSAM Cybersecurity Capture The Flag (CTF) Competition',
-        'Selected for Advanced Cloud Computing Research Program'
       ]
     },
     {
@@ -119,7 +114,6 @@ const Education = () => {
       ],
       achievements: [
         'Graduated with Honors (Mention Très Bien)',
-        'Class Representative - Computer Science Department',
         'Top 5% of graduating class'
       ]
     },
@@ -158,8 +152,6 @@ const Education = () => {
         }
       ],
       achievements: [
-        'Science Fair Winner - Regional Level',
-        'Mathematics Olympiad Participant',
         'Graduated with Honors'
       ]
     }
