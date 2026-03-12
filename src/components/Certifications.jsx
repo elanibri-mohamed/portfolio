@@ -23,7 +23,7 @@ const CERTIFICATIONS_DATA = [
     alt: 'Fortinet Certified Professional SASE certification badge',
     verificationLink: 'https://www.credly.com/badges/a119903e-8ec1-4eb2-8bf3-e99e72e7043b/public_url',
     description: 'The FCP in SASE certification validates my ability to secure internet and SaaS access using Fortinet SASE solutions in small and medium-sized SASE infrastructures. It demonstrates my skills in configuring and managing Fortinet SASE components, implementing secure access policies, and ensuring optimal performance for distributed users and applications. The certification confirms my expertise in deploying and maintaining SASE architectures to protect against modern cyber threats while enabling seamless connectivity.',
-    credentialId: 'a119903e-8ec1-4eb2-8bf3-e99e72e7043b',
+    credentialId: '',
     status: 'Active',
     skills: ['Cloud Security','Network Security','Fortinet','ADVPN','SASE','Secure  SD-WAN','Endpoint Management and Protection','Anitvirus','IPS','Border Gateway Protocol (BGP)','Web Filtering']
   },
@@ -37,7 +37,7 @@ const CERTIFICATIONS_DATA = [
     alt: 'Fortinet FortiSASE and SD-WAN 7.6 Core Administrator certification badge',
     verificationLink: 'https://www.credly.com/badges/fa9081ba-5ec9-4176-b35b-cbe58fedcecc/public_url',
     description: 'The FortiSASE and SD-WAN 7.6 Core Administrator exam badge recognizes my expertise in the configuration and daily operations of the FortiSASE and SD-WAN solutions. The badge demonstrated my knowledge in FortiSASE and SD-WAN configuration, integration, incident analysis, and basic troubleshooting. It validated my skills in implementing secure access service edge (SASE) architectures, managing SD-WAN deployments, and ensuring optimal performance and security for distributed networks.',
-    credentialId: 'fa9081ba-5ec9-4176-b35b-cbe58fedcecc',
+    credentialId: '',
     status: 'Active',
     skills: ['Cloud Security','Network Security','ZTNA','Inline-CASB','SASE','SD-WAN','Endpoint Management and Protection','Content Inspection','FWaaS','Forticlient'],
   },
